@@ -1,0 +1,162 @@
+/* ==========================================================================
+   ABOUT US SECTION - OCEANIC ENGINEER CONSULTANTS
+   Palette: Brand Red (#ea0104), Navy Blue (#0b1d3a), Black & White
+   ========================================================================== */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+  min-height: clamp(700px, 92vh, 940px);
+  padding: clamp(5rem, 8vh, 8rem) clamp(2rem, 6vw, 6rem) clamp(6rem, 10vh, 9rem);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+/* Main Section Layout Container - Centered */
+.about-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   CENTERED HEADER: ABOUT US
+   -------------------------------------------------------------------------- */
+.about-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 5vh, 4.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+/* Headline: ABOUT US (Navy + Brand Red) */
+.about-title {
+  font-family: var(--font-heading, 'Outfit', 'Space Grotesk', sans-serif);
+  font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: #0b1d3a;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.about-title-highlight {
+  display: inline;
+  color: #ea0104;
+  font-weight: 800;
+}
+
+/* --------------------------------------------------------------------------
+   CENTERED AREA: Clean Feature Cards Track
+   -------------------------------------------------------------------------- */
+.about-cards-track {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: clamp(1.5rem, 2.8vw, 3rem);
+  margin: 0 auto;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   FEATURE CARDS - Standalone Modern Cards (No Pipes, No Icons)
+   -------------------------------------------------------------------------- */
+.about-card {
+  position: relative;
+  flex: 1 1 clamp(280px, 24vw, 350px);
+  max-width: 380px;
+  min-height: 280px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 2.6rem 2.2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 14px 34px -8px rgba(15, 23, 42, 0.08),
+              0 2px 6px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  z-index: 3;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 46px -10px rgba(11, 29, 58, 0.12),
+              0 0 0 1.5px rgba(234, 1, 4, 0.35);
+  border-color: rgba(234, 1, 4, 0.5);
+}
+
+.about-card:hover .about-card-accent-bar {
+  width: 48px;
+  background: #ea0104;
+}
+
+/* Card Title */
+.about-card-title {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0b1d3a;
+  margin: 0 0 0.6rem 0;
+  letter-spacing: -0.015em;
+}
+
+/* Distinct Brand Red Accent Bar Under Title */
+.about-card-accent-bar {
+  display: block;
+  width: 32px;
+  height: 3.5px;
+  background: #ea0104;
+  border-radius: 2px;
+  margin-bottom: 1.1rem;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+
+/* Card Body Text */
+.about-card-text {
+  font-family: var(--font-body, 'Outfit', -apple-system, sans-serif);
+  font-size: 0.95rem;
+  line-height: 1.68;
+  color: #556477;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .about-cards-track {
+    gap: 1.5rem;
+  }
+
+  .about-card {
+    flex: 1 1 100%;
+    max-width: 480px;
+    min-height: auto;
+    padding: 2.2rem 1.8rem;
+  }
+}

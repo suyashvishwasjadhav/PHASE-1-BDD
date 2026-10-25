@@ -1,0 +1,194 @@
+/* ==========================================================================
+   CLIENTS SECTION - OCEANIC ENGINEER CONSULTANTS
+   Palette: Brand Red (#ea0104), Navy Blue (#0b1d3a), Black & White
+   ========================================================================== */
+
+.clients-section {
+  position: relative;
+  width: 100%;
+  background: #fbfcfe;
+  padding: clamp(5rem, 8vh, 8rem) clamp(2rem, 6vw, 6rem) clamp(6rem, 10vh, 9rem);
+  box-sizing: border-box;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.clients-container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   CENTERED HEADER: OUR REPUTED CLIENTELE (Matches About Us & Services)
+   -------------------------------------------------------------------------- */
+.clients-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 5vh, 4.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Headline: OUR REPUTED CLIENTELE (Navy + Brand Red) */
+.clients-title {
+  font-family: var(--font-heading, 'Outfit', 'Space Grotesk', sans-serif);
+  font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: #0b1d3a;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+
+.clients-title-highlight {
+  display: inline;
+  color: #ea0104;
+  font-weight: 800;
+}
+
+/* Subtitle / Intro */
+.clients-subtitle {
+  font-family: var(--font-body, 'Outfit', -apple-system, sans-serif);
+  font-size: clamp(0.95rem, 1.05vw, 1.1rem);
+  line-height: 1.68;
+  color: #556477;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   CLIENTS 4x3 GRID - 12 Cards
+   -------------------------------------------------------------------------- */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.25rem, 2vw, 2rem);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   CLIENT CARD - Clean Modern Card (Matches Site Aesthetic)
+   -------------------------------------------------------------------------- */
+.client-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.2rem 1.6rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.07),
+              0 2px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  z-index: 2;
+}
+
+.client-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 42px -10px rgba(11, 29, 58, 0.12),
+              0 0 0 1.5px rgba(234, 1, 4, 0.35);
+  border-color: rgba(234, 1, 4, 0.45);
+}
+
+/* Logo Frame */
+.client-logo-wrapper {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.client-logo-img {
+  max-height: 64px;
+  max-width: 135px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.client-card:hover .client-logo-img {
+  transform: scale(1.08);
+}
+
+/* Client Name */
+.client-name {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0b1d3a;
+  margin: 0 0 0.45rem 0;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+/* Distinct Brand Red Accent Bar Under Title */
+.client-accent-bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #ea0104;
+  border-radius: 2px;
+  margin-bottom: 0.65rem;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+
+.client-card:hover .client-accent-bar {
+  width: 44px;
+}
+
+/* Client Full Name / Category */
+.client-fullname {
+  font-family: var(--font-body, 'Outfit', -apple-system, sans-serif);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 780px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .client-card {
+    padding: 1.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+}

@@ -1,0 +1,176 @@
+/* ==========================================================================
+   SERVICES SECTION - OCEANIC ENGINEER CONSULTANTS
+   Palette: Brand Red (#ea0104), Navy Blue (#0b1d3a), Black & White
+   ========================================================================== */
+
+.services-section {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  padding: clamp(5rem, 8vh, 8rem) clamp(2rem, 6vw, 6rem) clamp(6rem, 10vh, 9rem);
+  box-sizing: border-box;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.services-container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   CENTERED HEADER: OUR SERVICES (Matches About Us Heading Style)
+   -------------------------------------------------------------------------- */
+.services-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 5vh, 4.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Headline: OUR SERVICES (Navy + Brand Red) */
+.services-title {
+  font-family: var(--font-heading, 'Outfit', 'Space Grotesk', sans-serif);
+  font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: #0b1d3a;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+
+.services-title-highlight {
+  display: inline;
+  color: #ea0104;
+  font-weight: 800;
+}
+
+/* Subtitle / Intro from services.txt */
+.services-subtitle {
+  font-family: var(--font-body, 'Outfit', -apple-system, sans-serif);
+  font-size: clamp(0.95rem, 1.05vw, 1.1rem);
+  line-height: 1.68;
+  color: #556477;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   CARDS TRACK / GRID (No Images, Text & Accents Only)
+   -------------------------------------------------------------------------- */
+.services-cards-track {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1.5rem, 2.4vw, 2.4rem);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SERVICE CARD - Clean Engineering Card (Matches About Us Card Style)
+   -------------------------------------------------------------------------- */
+.service-card {
+  position: relative;
+  flex: 0 1 clamp(280px, 28vw, 360px);
+  width: clamp(280px, 28vw, 360px);
+  min-height: 250px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 2.2rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: 0 14px 34px -8px rgba(15, 23, 42, 0.08),
+              0 2px 6px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  z-index: 2;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 46px -10px rgba(11, 29, 58, 0.12),
+              0 0 0 1.5px rgba(234, 1, 4, 0.35);
+  border-color: rgba(234, 1, 4, 0.5);
+}
+
+.service-card:hover .service-card-accent-bar {
+  width: 48px;
+  background: #ea0104;
+}
+
+/* Card Number Tag */
+.service-card-num {
+  font-family: var(--font-heading, 'Space Grotesk', monospace);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ea0104;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.7rem;
+  display: inline-block;
+}
+
+/* Card Title */
+.service-card-title {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0b1d3a;
+  margin: 0 0 0.55rem 0;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+/* Distinct Brand Red Accent Bar Under Title */
+.service-card-accent-bar {
+  display: block;
+  width: 32px;
+  height: 3.5px;
+  background: #ea0104;
+  border-radius: 2px;
+  margin-bottom: 0.95rem;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+
+/* Card Body Text */
+.service-card-text {
+  font-family: var(--font-body, 'Outfit', -apple-system, sans-serif);
+  font-size: 0.92rem;
+  line-height: 1.62;
+  color: #556477;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .services-cards-track {
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    flex: 1 1 100%;
+    max-width: 480px;
+    min-height: auto;
+    padding: 2rem 1.6rem;
+  }
+}

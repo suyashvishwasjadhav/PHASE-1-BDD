@@ -1,0 +1,126 @@
+.navbar {
+  width: 100%;
+  border: none;
+  background: #ffffff;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem clamp(2rem, 6vw, 6rem);
+  box-sizing: border-box;
+}
+
+/* Left: Brand Lockup (Logo + Company Heading) */
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.15rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.navbar-brand:hover {
+  opacity: 0.92;
+}
+
+.navbar-logo {
+  height: clamp(68px, 5.5vw, 86px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar-brand-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar-company-name {
+  font-family: var(--font-heading, 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-navy, #211e72);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.navbar-tagline {
+  font-family: var(--font-heading, 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+/* Right: Navigation links */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navbar-link {
+  font-family: var(--font-body, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+  text-decoration: none;
+  position: relative;
+  padding: 0.35rem 0.15rem;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--brand-red, #ea0104);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease;
+}
+
+.navbar-link:hover {
+  color: var(--brand-navy, #211e72);
+}
+
+.navbar-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN (Tablets & Mobile)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .navbar-container {
+    padding: 1rem clamp(1.25rem, 4vw, 2rem);
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo {
+    height: 60px;
+  }
+
+  .navbar-company-name {
+    font-size: 1.05rem;
+  }
+
+  .navbar-nav {
+    gap: 1.5rem;
+  }
+}
